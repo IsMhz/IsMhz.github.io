@@ -11,18 +11,39 @@ body {
 a {
     color: white;
 }
+
 a:hover {
     text-decoration: none;
     font-weight: bold;
     color: #447965;
 }
 
+.footerLink {
+    text-decoration: none;
+    color: black;
+}
+.footerLink:hover
+{
+    font-weight: bold;
+    color: black;
+
+}
 
 .header {
+
+    width: 100%;
+    height: auto;
+
+}
+
+
+.header-bg {
+        
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(/images/headerImg.jpg) no-repeat center scroll; /* U Can use FIXED or SCROLL*/
     padding: 25%;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(/images/headerImg.jpg) no-repeat center center fixed;
     background-size: cover;
 }
+
 
 .headerContent {
 
