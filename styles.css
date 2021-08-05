@@ -8,6 +8,15 @@ body {
     background: #f1f1f1;
 }
 
+a {
+    color: white;
+}
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #447965;
+}
+
 
 .header {
     padding: 25%;
