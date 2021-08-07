@@ -36,8 +36,8 @@ a:hover {
 
 header{
     width: 100%;
-    padding: 25%;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(/images/spaceBg.jpg) no-repeat center fixed;  /*U Can use FIXED or SCROLL*/
+    padding: 15%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(/images/spaceBg.jpg) no-repeat center;  /*U Can use FIXED or SCROLL*/
     background-size:cover;
     display: block;
     top: 0;
@@ -46,10 +46,11 @@ header{
 }
 
 .headerContent {
-width: 50%;
+    
+    
     height: auto;
     text-align: center;
-    position: fixed;
+
 
 }
 
