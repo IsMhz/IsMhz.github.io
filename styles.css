@@ -2,10 +2,14 @@
     width: device-width;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 body {
-    font-family: Arial;
-    padding: none;
-    background: #f1f1f1;
+    font-family: sans-serif;
+    
 }
 
 a {
@@ -15,7 +19,8 @@ a {
 a:hover {
     text-decoration: none;
     font-weight: bold;
-    color: #447965;
+    color: #fff;
+    
 }
 
 .footerLink {
@@ -29,28 +34,30 @@ a:hover {
 
 }
 
-.header {
-
+header{
     width: 100%;
-    height: auto;
-
-}
-
-
-.header-bg {
-        
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(/images/headerImg.jpg) no-repeat center scroll; /* U Can use FIXED or SCROLL*/
     padding: 25%;
-    background-size: cover;
-}
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(/images/spaceBg.jpg) no-repeat center fixed;  /*U Can use FIXED or SCROLL*/
+    background-size:cover;
+    display: block;
+    top: 0;
 
+
+}
 
 .headerContent {
-
+width: 50%;
+    height: auto;
     text-align: center;
-    color: white;
+    position: fixed;
+
 }
 
+.nav {
+    justify-content: center;
+    display: flex;
+    
+}
 
 .leftcolumn {
     float: left;
@@ -78,6 +85,7 @@ a:hover {
     margin-top: 20px;
 }
 
+
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -87,7 +95,7 @@ a:hover {
 
 /* Footer */
 .footer {
-    padding: 20px;
+
     text-align: center;
     background: #ddd;
     margin-top: 20px;
