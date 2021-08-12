@@ -1,113 +1,92 @@
-@-ms-viewport {
-    width: device-width;
-}
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-body {
-    font-family: sans-serif;
-    
-}
-
-a {
+  
+  a {
     color: white;
-}
-
-a:hover {
+  }
+  
+  a:hover {
     text-decoration: none;
     font-weight: bold;
     color: #fff;
     
-}
-
-.footerLink {
+  }
+  
+  .footerLink {
     text-decoration: none;
     color: black;
-}
-.footerLink:hover
-{
+  }
+  .footerLink:hover
+  {
     font-weight: bold;
     color: black;
-
-}
-
-header{
+  
+  }
+  
+  header{
     width: 100%;
     padding: 15%;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(/images/spaceBg.jpg) no-repeat center;  /*U Can use FIXED or SCROLL*/
     background-size:cover;
     display: block;
     top: 0;
-
-
-}
-
-.headerContent {
+  
+  
+  }
+  
+  .headerContent {
     
     
     height: auto;
     text-align: center;
-
-
-}
-
-.nav {
+  
+  
+  }
+  
+  .nav {
     justify-content: center;
     display: flex;
     
-}
-
-.leftcolumn {
+  }
+  
+  .leftcolumn {
     float: left;
     width: 75%;
-}
-
-
-.rightcolumn {
+  }
+  
+  
+  .rightcolumn {
     float: left;
     width: 25%;
     padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
+  }
+  
+  /* Fake image */
+  .fakeimg {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
+  }
+  
+  /* Add a card effect for articles */
+  .card {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
-}
-
-
-/* Clear floats after the columns */
-.row:after {
+  }
+  
+  
+  /* Clear floats after the columns */
+  .row:after {
     content: "";
     display: table;
     clear: both;
-}
-
-/* Footer */
-.footer {
-
+  }
+  
+  /* Footer */
+  .footer {
+  
     text-align: center;
     background: #ddd;
     margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-
-    .leftcolumn,
-    .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
-}
+  }
+  
