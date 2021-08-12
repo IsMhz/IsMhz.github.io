@@ -9,18 +9,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
-        html,
-        body {
+        * {
             margin: 0;
             padding: 0;
-            width: 100%;
+
         }
 
         body {
-            font-family: sans-serif;
-
+            font-family: 'Montserrat', sans-serif;
         }
 
         a {
@@ -34,84 +35,142 @@
 
         }
 
-        .footerLink {
-            text-decoration: none;
-            color: black;
-        }
-
-        .footerLink:hover {
-            font-weight: bold;
-            color: black;
-
-        }
-
         header {
             width: 100%;
             padding: 15%;
-            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(/images/spaceBg.jpg) no-repeat center;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(/images/spaceBg.jpg) no-repeat center fixed;
             /*U Can use FIXED or SCROLL*/
             background-size: cover;
             display: block;
             top: 0;
-
-
         }
 
         .headerContent {
-
-
             height: auto;
             text-align: center;
-
-
         }
 
         .nav {
             justify-content: center;
             display: flex;
-
-        }
-
-        .leftcolumn {
-            float: left;
-            width: 75%;
         }
 
 
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            padding-left: 20px;
-        }
-
-        /* Fake image */
-        .fakeimg {
-            background-color: #aaa;
-            width: 100%;
-            padding: 20px;
-        }
-
-        /* Add a card effect for articles */
-        .card {
-            background-color: white;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Footer */
-        .footer {
-
+        [class*="main"+"col"] {
+            padding: 1rem;
+            background-color: #fff;
+            border: 2px solid #fff;
+            color: #000;
             text-align: center;
-            background: #ddd;
-            margin-top: 20px;
+        }
+
+        [class*="row"] {
+            margin: auto;
+        }
+
+        #card {
+            padding: 1rem;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, .125);
+            color: black;
+            text-align: center;
+            max-width: 100%;
+        }
+
+        #mail {
+            color: black;
+            border: 1px solid rgba(0, 0, 0, .125);
+
+        }
+
+        .footer-dark {
+            padding: 50px 0;
+            color: #f0f9ff;
+            background-color: #282d32;
+        }
+
+        .footer-dark h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .footer-dark ul {
+            padding: 0;
+            list-style: none;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .footer-dark ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.6;
+        }
+
+        .footer-dark ul a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width:767px) {
+            .footer-dark .item:not(.social) {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+        }
+
+        .footer-dark .item.text {
+            margin-bottom: 36px;
+        }
+
+        @media (max-width:767px) {
+            .footer-dark .item.text {
+                margin-bottom: 0;
+            }
+        }
+
+        .footer-dark .item.text p {
+            opacity: 0.6;
+            margin-bottom: 0;
+        }
+
+        .footer-dark .item.social {
+            text-align: center;
+        }
+
+        @media (max-width:991px) {
+            .footer-dark .item.social {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+
+        .footer-dark .item.social>a {
+            font-size: 20px;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+            margin: 0 8px;
+            color: #fff;
+            opacity: 0.75;
+        }
+
+        .footer-dark .item.social>a:hover {
+            opacity: 0.9;
+        }
+
+        .footer-dark .copyright {
+            text-align: center;
+            padding-top: 24px;
+            opacity: 0.3;
+            font-size: 13px;
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -122,25 +181,23 @@
     <header class="header">
         <div class="headerContent">
             <h3>
-                <a href="/page2.html" target="_blank">I N T R A N E T</a>
+                <a href="/page2.html" target="_blank">D I V Á N</a>
                 <br>
                 <small class="text-muted">Blog</small>
             </h3>
 
+            <!--NAV-->
             <nav class="nav">
                 <a class="nav-link active" href="#">Blog</a>
                 <a class="nav-link" href="#">Podcast</a>
                 <a class="nav-link" href="#">Contacto</a>
                 <a class="nav-link" href="#">Acerca de</a>
-
             </nav>
         </div>
-
-
-
     </header>
     </div>
 
+    <!--CARRUSEL-->
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -169,61 +226,225 @@
         </a>
     </div>
 
-    <div class="container" class="border d-flex justify-content-center">
+    <!--CONTENEDORES-->
 
-        <div class="leftcolumn">
-            <div class="card">
-                <h2>Primer Post</h2>
-                <h5>Title description, Dec 7, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
+    <div class="main" class="container-md" style="padding: 1rem;background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    color: #000;
+    text-align: center;
+    max-width: auto;">
+        <div class="row">
+            <div class="col-sm-10" style="text-align: center; color: #000;">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Escucha el Podcast
+                    </div>
+                    <div class="card-body">
+
+                        <iframe src="https://open.spotify.com/embed/episode/1Q1KFpPDIcdAkXBAub01mj?theme=0" width="100%" height="152" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <a href="https://open.spotify.com/show/38FdOu7nTC6ejWiA7zZ1Sf?si=3I8G1SPvRJyVZMGYoKySJw&dl_branch=1" class="btn btn-success" style="width:100px" target="_blank">Spotify</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Disponible en otras plataformas
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h2>Segundo Post</h2>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
-            </div>
-        </div>
-        <div class="rightcolumn">
-            <div class="card">
-                <h2>About Me</h2>
-                <div class="fakeimg" style="height:100px;">Image</div>
-                <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-            </div>
-            <div class="card">
-                <h3>Nuestro Podcast</h3>
-                <div class="fakeimg">Image</div><br>
-                <div class="fakeimg">Image</div><br>
-                <div class="fakeimg">Image</div>
-            </div>
-
-
-            <div  class="card">
-                <h4>Contacto</h4>
-                <form action="" method="POST">
-                    Correo: <input type="text" name="correo" required placeholder="user@mail.com" />
-                    <br>
-                    Telefono: <input type="number" name="telephone" required />
-                    <br>
-                    <button>Contactar</button>
-                </form>
-
-
+            <div class="col-sm-2">
+                <br>
+                <button type="button" class="btn btn-outline-primary" style="width:200px">Iniciar Sesión</button>
+                <br>
+                <br>
+                <button type="button" class="btn btn-outline-primary" style="width:200px">Registrarse</button>
             </div>
         </div>
 
+
+        <!--INICIO POST-->
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-8">
+                <h1 style="color: black; text-align: center;">Blog</h1>
+                <br>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+
+                <!--ARTICLE-->
+                <div class="row">
+                    <div class="col" id="card">
+                        <img src="/images/libro3.jpg" class="card-img-top" class="img-fluid alt=" ...">
+                        <div class="card-body">
+                            <h5 class="card-title">Reseña: El Mito del Eterno Retorno</h5>
+                            <p class="card-text">Mircea Eliade</p>
+                            <a href="#" class="btn btn-secondary">Ir al post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    hace 2 días
+                </div>
+                <br>
+                <!--ARTICLE-->
+
+                <!--ARTICLE-->
+                <div class="row">
+                    <div class="col" id="card">
+                        <img src="/images/libro2.jpg" class="card-img-top" class="img-fluid alt=" ...">
+                        <div class="card-body">
+                            <h5 class="card-title">Reseña: Tratado de historía de las religiones</h5>
+                            <p class="card-text">Mircea Eliade</p>
+                            <a href="#" class="btn btn-secondary">Ir al post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+                <br>
+                <!--ARTICLE-->
+
+            </div>
+
+            <!--SIDE-->
+
+            <div class="col-4">
+                <h1 style="color: black; text-align: center;">Recientes...</h1>
+                <br>
+                <!--Miniatura-->
+                <div class="card" style="width: 18rem; right: -25%;">
+                    <a href="">
+                        <img src="/images/libro4.jpg" class="card-img-top" alt="...">
+                    </a>
+
+                    <div class="card-body">
+                        <p class="card-text">En Todos Somos Canibales, el antropólogo...</p>
+                    </div>
+                </div>
+                <br>
+                <!--END MINIATURA-->
+                <!--Miniatura-->
+                <div class="card" style="width: 18rem; right: -25%;">
+                    <a href="">
+                        <img src="/images/libro6.jpg" class="card-img-top" alt="...">
+                    </a>
+
+                    <div class="card-body">
+                        <p class="card-text">Un libro fundamental para los iniciados en telecomunicaciones...</p>
+                    </div>
+                </div>
+                <br>
+                <!--END MINIATURA-->
+                <!--Miniatura-->
+                <div class="card" style="width: 18rem; right: -25%;">
+                    <a href="">
+                        <img src="/images/libro7.jpg" class="card-img-top" alt="...">
+                    </a>
+
+                    <div class="card-body">
+                        <p class="card-text">La dicotomia de lo profano y lo sagrado, en el libro de...</p>
+                    </div>
+                </div>
+                <br>
+                <!--END MINIATURA-->
+                <!--Miniatura-->
+                <div class="card" style="width: 18rem; right: -25%;">
+                    <a href="">
+                        <img src="/images/libro8.jpg" class="card-img-top" alt="...">
+                    </a>
+
+                    <div class="card-body">
+                        <p class="card-text">Luis Mora, uno de los poco nombrados ilustres de la Nueva España, narra...
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <!--END MINIATURA-->
+            </div>
+
+            <!--END SIDE-->
+        </div>
+        <!--END CONTENEDOR-->
+
+
+        <!--MAIL-->
+        <div class="container-md">
+            <div class="row">
+                <div class="col-md-12" id="mail">
+                    <div class="mail">
+                        <br>
+                        <h4>Contacto</h4>
+
+
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Ingresa tu correo</label>
+                                <input type="text" name="correo" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="user@correo.com">
+                            </div>
+                            <button type="button" class="btn btn-dark">Enviar</button>
+
+                        </form>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
     </div>
 
+    <!--END MAIL-->
 
+    <!--FOOTER-->
 
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Blog</h3>
+                        <ul>
+                            <li><a href="#">Reseñas</a></li>
+                            <li><a href="#">Suscríbete</a></li>
+                            <li><a href="#">Admin Page</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Sobre el Podcast</h3>
+                        <ul>
+                            <li><a href="#">Spotify</a></li>
+                            <li><a href="#">Google Podcast</a></li>
+                            <li><a href="#">Anchor</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>El Divan Blog</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, necessitatibus? Vero hic, nesciunt quasi adipisci iure, dolorum at modi perspiciatis maxime ab ducimus eum quia repellendus dolorem, mollitia eos magnam?</p>
+                    </div>
 
-
-    <div class="container d-flex justify-content-center">
-        <div class="footer">
-            <h2><a class="footerLink" href="https://linktr.ee/intranetpodcast">FOOTER</a></h2>
-        </div>
+                </div>
+                <p class="copyright">El Divan Blog © 2021</p>
+            </div>
+        </footer>
     </div>
+    </div>
+
 
 
 
