@@ -3,9 +3,12 @@
   padding: 0;
 
 }
-
 body {
   font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background-color: black;
+  min-width: 340px;
+  
 }
 
 a {
@@ -14,31 +17,78 @@ a {
 
 a:hover {
   text-decoration: none;
-  font-weight: bold;
-  color: #fff;
+  color: #8daaba;
+  transition-duration: 0.3s;
 
 }
+
+
+/*TEST */
 
 header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
   width: 100%;
-  padding: 15%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(/images/spaceBg.jpg) no-repeat center fixed;
-  /*U Can use FIXED or SCROLL*/
-  background-size: cover;
-  display: block;
-  top: 0;
+  overflow: hidden;
 }
 
-.headerContent {
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
   height: auto;
-  text-align: center;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.nav {
-  justify-content: center;
-  display: flex;
+header .container {
+  position: relative;
+  z-index: 2;
 }
 
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}
+
+/*TEST     -------------------       */
+
+
+#nav {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  width: auto;
+  font-size: 18px;
+  padding: 5vh;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
 
 [class*="main"+"col"] {
   padding: 1rem;
@@ -51,26 +101,64 @@ header {
 [class*="row"] {
   margin: auto;
 }
+#content-1 {
+  background-color: red; 
+  height: auto;
+}
+
+#table-style {
+  height: 30vh;
+  max-width: 50%;
+  margin: 1rem;
+}
+.card { 
+  background-color: rgb(6,27,43);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#card-1 {
+  padding: 1rem;
+  background-color: rgb(6,27,43);
+  color: #8daaba;
+  border: 1px solid 627686;
+  text-align: center;
+  max-width: 100%;
+  margin: 1rem;
+}
+
+#card-2 {
+  padding: 1rem;
+  text-align: center;
+}
 
 #card {
   padding: 1rem;
-  background-color: white;
+  background-color: #3e4b54;
   border: 1px solid rgba(0, 0, 0, .125);
-  color: black;
+  color: #8daaba;
   text-align: center;
   max-width: 100%;
+  margin: 1rem;
+}
+
+#contacto {
+  background-color: #060606; 
+  height: auto;
+  text-align: center;
 }
 
 #mail {
-  color: black;
+  color: white;
   border: 1px solid rgba(0, 0, 0, .125);
-
+  background-color: #060606;
+  height: 30vh;
 }
 
 .footer-dark {
   padding: 50px 0;
   color: #f0f9ff;
-  background-color: #282d32;
+  background-color: rgb(6,27,43);
 }
 
 .footer-dark h3 {
@@ -156,3 +244,13 @@ header {
   font-size: 13px;
   margin-bottom: 0;
 }
+
+
+
+/* COLORES */
+
+.color1 {color: #060606;}
+.color2 {color: #1e2129;}
+.color3 {color: #3e4b54;}
+.color4 {color: #627686;}
+.color5 {color: #8daaba;}
