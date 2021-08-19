@@ -6,7 +6,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: #fff;
-  background-color: black;
+  background-color:#000;
   min-width: 340px;
   
 }
@@ -22,13 +22,12 @@ a:hover {
 
 }
 
-
 /*TEST */
 
 header {
   position: relative;
   background-color: black;
-  height: 75vh;
+  height: 450px;
   min-height: 50rem;
   width: 100%;
   overflow: hidden;
@@ -69,7 +68,6 @@ header .overlay {
 
 /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
 
-
 /*
 @media (pointer: coarse) and (hover: none) {
   header {
@@ -82,9 +80,7 @@ header .overlay {
 } */
 
 
-
 /*TEST     -------------------       */
-
 
 #nav {
   background-color: rgba(0, 0, 0, 0.4) !important;
@@ -93,6 +89,15 @@ header .overlay {
   padding: 5vh;
   border: 1px solid rgba(0, 0, 0, 0.4);
 }
+
+.my-5 {
+  background-color: #000;
+}
+
+.car-style-1 {
+  height: auto;
+}
+
 
 [class*="main"+"col"] {
   padding: 1rem;
@@ -106,56 +111,59 @@ header .overlay {
   margin: auto;
 }
 
-
 /*Spotify*/
 .card { 
   background-color: rgb(6,27,43);
   color:#fff;
   font-family: 'Montserrat', sans-serif;
+  height: 350px;
+}
+
+#card-2 {
+  text-align: center;
+  background-color: brown;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
 }
 
 #card-1 {
   padding: 1rem;
   background-color: rgb(6,27,43);
   color: #8daaba;
-  border: 1px;
   text-align: center;
   max-width: 100%;
   margin: 1rem;
 }
 
-#card-2 {
-  padding: 1rem;
-  text-align: center;
+.separacion {
+  background-color: brown;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #card {
   padding: 1rem;
-  background-color: #3e4b54;
-  border: 1px solid rgba(0, 0, 0, .125);
-  color: #FFF;
+  background-color: #fff;
+  border: 1px solid black;
+  color: #000;
   text-align: center;
   max-width: 100%;
   margin: 1rem;
 }
 
 #contacto {
-  background-color: #060606; 
-  height: auto;
-  text-align: center;
-  height: auto;
+background-color: brown;
+display: flex;
+height: 380px;
+justify-content: center;
+align-items: center;
 }
 
-#contacto-style {
-  height: 300px;
-}
-
-#mail {
-  color: white;
-  border: 1px solid rgba(0, 0, 0, .125);
-  background-color: #060606;
-  height: 30vh;
-}
 
 .footer-dark {
   padding: 50px 0;
