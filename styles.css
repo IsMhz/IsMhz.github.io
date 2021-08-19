@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #fff;
@@ -16,7 +22,7 @@ a:hover {
 
 }
 
-/*TEST */
+/*HEADER*/
 
 header {
   position: relative;
@@ -58,24 +64,6 @@ header .overlay {
   z-index: 1;
 }
 
-/* Media Query for devices withi coarse pointers and no hover functionality */
-
-/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
-
-/*
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-  }
-
-  header video {
-    display: none;
-  }
-} */
-
-
-/*TEST     -------------------       */
-
 #nav {
   background-color: rgba(0, 0, 0, 0.4) !important;
   width: auto;
@@ -99,7 +87,7 @@ header .overlay {
   font-family: 'Montserrat', sans-serif;
   height: 350px;
 }
-
+/*Spotify*/
 
 .card-header {
   border: 2px solid rgb(6, 27, 43);
@@ -127,21 +115,12 @@ header .overlay {
   background-color: rgb(6, 27, 43);
   color: #fff;
   text-align: center;
-  min-width: 400px;
   margin: 1rem;
 }
 
 .card-1-item {
   padding-top: 1rem;
   margin: 0.5rem;
-}
-
-.separacion {
-  background-color: brown;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #card {
@@ -151,6 +130,14 @@ header .overlay {
   text-align: center;
   max-width: 100%;
   margin: 1rem;
+}
+
+.separacion {
+  background-color: brown;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contacto {
@@ -167,6 +154,7 @@ header .overlay {
   margin: 1rem;
 }
 
+/*FOOTER GENERICO-------------------------------------------*/
 
 .footer-dark {
   padding: 50px 0;
@@ -258,6 +246,7 @@ header .overlay {
   margin-bottom: 0;
 }
 
+/*END FOOTER GENERICO-------------------------------------------*/
 
 
 /* COLORES */
@@ -287,7 +276,7 @@ header .overlay {
 }
 
 
-/*---PAGE BLOG--------------------------------------------------------------*/
+/*---STYLES FOR PAGE: BLOG--------------------------------------------------------------*/
 
 .header-generico {
   height: auto;
@@ -312,16 +301,10 @@ header .overlay {
 
 #test-2 {
   height: 500px;
-  margin: 1rem;
-  padding: 1rem;
-  display: flex;
+  margin: 2rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-#test-2-item {
-  max-width: 400px;
 }
 
 .separador-2 {
