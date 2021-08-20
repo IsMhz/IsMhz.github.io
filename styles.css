@@ -64,19 +64,6 @@ header .overlay {
   z-index: 1;
 }
 
-/*END MAIN HEADER*/
-
-/*HEADER GENERIC*/
-
-.header-generico {
-  height: auto;
-  background-color: #627686;
-  color: #000;
-  width: auto;
-}
-
-/*END HEADER GENERIC*/
-
 #nav {
   background-color: rgba(0, 0, 0, 0.4) !important;
   width: auto;
@@ -100,6 +87,7 @@ header .overlay {
   font-family: 'Montserrat', sans-serif;
   height: 350px;
 }
+
 /*Spotify*/
 
 .card-header {
@@ -291,8 +279,15 @@ header .overlay {
 
 /*---STYLES FOR PAGE: BLOG--------------------------------------------------------------*/
 
+.header-generico {
+  height: auto;
+  background-color: #627686;
+  color: #000;
+  width: auto;
+}
+
 .separacion-blog {
-  background-color: brown;
+  background-color: black;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -303,19 +298,18 @@ header .overlay {
   background-color: rgb(6, 27, 43);
   height: auto;
   color: #fff;
-  overflow: visible;
 }
 
 #test-2 {
-  margin: 5rem 0px;
-}
-
-.gap100 {
-  padding: 1rem 5px;
+  height: 500px;
+  margin: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .separador-2 {
-  background-color: brown;
+  background-color: black;
   height: 300px;
   display: flex;
   justify-content: center;
